@@ -1,19 +1,22 @@
-import { Button } from "@workspace/ui/components/button"
+import { Features } from "./components/sections/Features"
+import { Hero } from "./components/sections/Hero"
+import { Navbar } from "./components/sections/Navbar"
 
 export function App() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="text-muted-foreground font-mono text-xs">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+    <div className="flex min-h-screen flex-col">
+      <Navbar />
+      <Hero />
+      <Features />
+
+      {/* Start with the first ones then the rest follows the same reference for better progress */}
+      {/* Pending to update the responsiveness and content, after that we go with: translations and dark mode */}
+
+      {/* <Products /> */}
+      {/* <ImportProcess /> */}
+      {/* <WhyChooseUs /> */}
+      {/* <Logistics /> */}
+      {/* <Footer /> */}
     </div>
   )
 }
