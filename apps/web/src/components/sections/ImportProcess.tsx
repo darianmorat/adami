@@ -1,6 +1,6 @@
 export const ImportProcess = () => {
   return (
-    <div className="flex flex-col gap-5 bg-purple-100/60 p-10 text-center">
+    <section className="flex flex-col gap-5 bg-purple-100/60 p-10 text-center" id="process">
       <div>
         <h2 className="text-sm font-bold text-green-700">NUESTRO PROCESO DE IMPORTACIÓN</h2>
         <h3 className="text-2xl font-bold">
@@ -51,6 +51,6 @@ export const ImportProcess = () => {
           <p>Description</p>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

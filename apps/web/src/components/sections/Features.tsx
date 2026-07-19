@@ -1,16 +1,67 @@
+import { GlobeIcon, LeafIcon, ShieldCheckIcon, SnowflakeIcon } from "lucide-react"
 import { Container } from "../layout/Container"
 
 export const Features = () => {
   return (
-    <div className="bg-purple-950 text-white">
-      <Container>
-        <div className="flex justify-evenly py-10">
-          <div>CALIDAD PREMIUM</div>
-          <div>CADENA DE FRIO</div>
-          <div>TRAZABILIDAD TOTAL</div>
-          <div>ENVIOS A ESPAÑA Y EUROPA</div>
+    <section className="relative my-10 bg-purple-950 text-white">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 80"
+        preserveAspectRatio="none"
+        className="absolute h-15 w-full -translate-y-[calc(100%-1px)]"
+      >
+        <path
+          d="M 0 80 L 0 52 L 30 55.37286366254304 L 60 58.62624194832421 L 90 61.64488230962194 L 120 64.3218479067164 L 150 66.56230589874906 L 180 68.28688694438836 L 210 69.43449690031537 L 240 69.96448111170889 L 270 69.8580646236606 L 300 69.11901729331277 L 330 67.77352024078954 L 360 65.86923836996421 L 390 63.47363181547641 L 420 60.67156613383087 L 450 57.56230589874905 L 480 54.25599820415747 L 510 50.86977064847236 L 540 47.52358203103261 L 570 44.33597275182869 L 600 41.41986545873548 L 630 38.87856470641459 L 660 36.802097340963726 L 690 35.26402325401148 L 720 34.3188294868836 L 750 34 L 780 34.3188294868836 L 810 35.26402325401148 L 840 36.802097340963726 L 870 38.87856470641459 L 900 41.41986545873548 L 930 44.3359727518287 L 960 47.52358203103262 L 990 50.86977064847236 L 1020 54.25599820415748 L 1050 57.562305898749045 L 1080 60.67156613383088 L 1110 63.473631815476416 L 1140 65.86923836996421 L 1170 67.77352024078954 L 1200 69.11901729331277 L 1200 80 Z"
+          fill="#3c0366"
+        />
+      </svg>
+      <Container className="my-[-15px]">
+        <div className="relative flex justify-evenly py-10">
+          <div className="flex items-center gap-4">
+            <div className="rounded-full border-2 p-2">
+              <LeafIcon />
+            </div>
+            <p>
+              CALIDAD <br /> PREMIUM
+            </p>
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="rounded-full border-2 p-2">
+              <SnowflakeIcon />
+            </div>
+            <p>
+              CADENA <br /> DE FRIO
+            </p>
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="rounded-full border-2 p-2">
+              <ShieldCheckIcon />
+            </div>
+            <p>
+              TRAZABILIDAD <br /> TOTAL
+            </p>
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="rounded-full border-2 p-2">
+              <GlobeIcon />
+            </div>
+            <p>
+              ENVIOS A <br /> ESPAÑA Y EUROPA
+            </p>
+          </div>
         </div>
       </Container>
-    </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 80"
+        preserveAspectRatio="none"
+        className="absolute bottom-0 h-15 w-full translate-y-[calc(100%-1px)] -scale-y-100"
+      >
+        <path
+          d="M 0 80 L 0 52 L 30 55.37286366254304 L 60 58.62624194832421 L 90 61.64488230962194 L 120 64.3218479067164 L 150 66.56230589874906 L 180 68.28688694438836 L 210 69.43449690031537 L 240 69.96448111170889 L 270 69.8580646236606 L 300 69.11901729331277 L 330 67.77352024078954 L 360 65.86923836996421 L 390 63.47363181547641 L 420 60.67156613383087 L 450 57.56230589874905 L 480 54.25599820415747 L 510 50.86977064847236 L 540 47.52358203103261 L 570 44.33597275182869 L 600 41.41986545873548 L 630 38.87856470641459 L 660 36.802097340963726 L 690 35.26402325401148 L 720 34.3188294868836 L 750 34 L 780 34.3188294868836 L 810 35.26402325401148 L 840 36.802097340963726 L 870 38.87856470641459 L 900 41.41986545873548 L 930 44.3359727518287 L 960 47.52358203103262 L 990 50.86977064847236 L 1020 54.25599820415748 L 1050 57.562305898749045 L 1080 60.67156613383088 L 1110 63.473631815476416 L 1140 65.86923836996421 L 1170 67.77352024078954 L 1200 69.11901729331277 L 1200 80 Z"
+          fill="#3c0366"
+        />
+      </svg>
+    </section>
   )
 }
