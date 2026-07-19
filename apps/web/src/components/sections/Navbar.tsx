@@ -1,5 +1,13 @@
 import { Button } from "@workspace/ui/components/button"
 import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@workspace/ui/components/sheet"
+import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
@@ -7,38 +15,63 @@ import {
 } from "@workspace/ui/components/navigation-menu"
 import { Container } from "../layout/Container"
 import { Logo } from "../Logo"
-import { ChevronRightIcon } from "lucide-react"
+import { MenuIcon, MessageCircleMoreIcon } from "lucide-react"
 
 export const Navbar = () => {
+  const links = [
+    { href: "#products", label: "Products" },
+    { href: "#", label: "Proceso" },
+    { href: "#", label: "Logistica" },
+    { href: "#", label: "Nosotros" },
+    { href: "#contact", label: "Contacto" },
+  ]
+
   return (
-    <nav className="border-b py-4">
+    <nav className="z-10 bg-background py-4">
       <Container>
-        <div className="flex items-center gap-10">
-          <Logo size="navbar" className="flex-1 items-start" />
-          <NavigationMenu className="flex-1">
+        <div className="flex justify-between gap-10">
+          <Logo size="navbar" className="flex-none" />
+          <NavigationMenu className="hidden flex-1 md:inline-flex">
             <NavigationMenuList className="flex gap-5">
-              <NavigationMenuItem>
-                <NavigationMenuLink render={<a href="#products">Productos</a>} />
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink render={<a href="#">Proceso</a>} />
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink render={<a href="#">Logistica</a>} />
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink render={<a href="#">Nosotros</a>} />
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink render={<a href="#contact">Contacto</a>} />
-              </NavigationMenuItem>
+              {links.map(({ href, label }, i) => (
+                <NavigationMenuItem key={i}>
+                  <NavigationMenuLink render={<a href={href}>{label}</a>} />
+                </NavigationMenuItem>
+              ))}
             </NavigationMenuList>
           </NavigationMenu>
-          <div className="flex flex-1 justify-end gap-2">
-            <Button size="lg">
-              Solicitar presupuesto <ChevronRightIcon />
-            </Button>
-          </div>
+
+          <Button size="lg" className="hidden md:inline-flex">
+            Contactanos <MessageCircleMoreIcon />
+          </Button>
+
+          {/* Mobile */}
+          <Sheet>
+            <SheetTrigger
+              render={
+                <Button size="icon-lg" variant="outline" className="md:hidden">
+                  <MenuIcon />
+                </Button>
+              }
+            />
+            <SheetContent>
+              <SheetHeader>
+                <nav className="mt-12 flex flex-col gap-4">
+                  {links.map(({ href, label }, i) => (
+                    <SheetClose key={i} render={<a href={href} />}>
+                      <Button variant="secondary" className="w-full">
+                        {label}
+                      </Button>
+                    </SheetClose>
+                  ))}
+
+                  <Button size="lg">
+                    Contactanos <MessageCircleMoreIcon />
+                  </Button>
+                </nav>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
         </div>
       </Container>
     </nav>
