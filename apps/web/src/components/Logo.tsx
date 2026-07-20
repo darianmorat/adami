@@ -31,7 +31,9 @@ export const Logo: React.FC<LogoProps> = ({ className, size = "navbar" }) => {
 
   return (
     <div className={cn("flex flex-col", v.gap, className)}>
-      <h1 className={cn("mt-[-3px] text-center font-bold text-purple-950", v.title)}>A D A M I</h1>
+      <h1 className={cn("mt-[-3px] text-center font-bold text-accent-2-text", v.title)}>
+        A D A M I
+      </h1>
 
       <div className="mt-[-5px] flex items-center justify-center gap-1 font-bold">
         <div className={cn(barClass, v.bar)} />

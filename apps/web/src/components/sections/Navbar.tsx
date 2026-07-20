@@ -4,7 +4,6 @@ import {
   SheetClose,
   SheetContent,
   SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@workspace/ui/components/sheet"
 import {
