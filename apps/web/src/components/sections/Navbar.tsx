@@ -18,11 +18,11 @@ import { MenuIcon, MessageCircleMoreIcon } from "lucide-react"
 
 export const Navbar = () => {
   const links = [
-    { href: "#products", label: "Products" },
-    { href: "#", label: "Proceso" },
-    { href: "#", label: "Logistica" },
-    { href: "#", label: "Nosotros" },
-    { href: "#contact", label: "Contacto" },
+    { href: "#products", label: "Productos" },
+    { href: "#import-process", label: "Importación" },
+    { href: "#about-us", label: "Nosotros" },
+    { href: "#logistics", label: "Logistica" },
+    // { href: "#contact", label: "Contacto" },
   ]
 
   return (

@@ -12,7 +12,7 @@ export const Features = () => {
 
   return (
     <section className="relative z-10 my-10 -mt-[15px] bg-accent-2 text-white">
-      <WaveDivider color="accent-2" />
+      <WaveDivider colorVar="accent-2" />
       <Container className="my-[-15px]">
         <div className="flex flex-col justify-center gap-5 py-10 md:flex-row">
           {features.map(({ icon: Icon, line1, line2 }, i) => (
@@ -33,7 +33,7 @@ export const Features = () => {
           ))}
         </div>
       </Container>
-      <WaveDivider color="accent-2" flip />
+      <WaveDivider colorVar="accent-2" flip />
     </section>
   )
 }
