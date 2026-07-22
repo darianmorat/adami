@@ -1,4 +1,11 @@
 import { CalendarCheck2Icon } from "lucide-react"
+import {
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/card"
 
 import platano from "../../assets/platano.jpg"
 
@@ -32,35 +39,30 @@ export const Products = () => {
 
   return (
     <section className="flex flex-col gap-5 p-10 text-center" id="products">
-      <div>
+      <div className="pb-4">
         <h2 className="text-sm font-bold text-primary">NUESTROS PRODUCTOS</h2>
         <h3 className="text-2xl font-bold">
           Frutas tropicales seleccionadas <br /> con los{" "}
           <span className="text-accent-2-text">más altos estándares</span> de calidad
         </h3>
       </div>
+
       <div className="flex flex-wrap justify-center gap-5">
         {products.map(({ img, name, desc, avail }, i) => (
-          <div
-            className="flex w-full max-w-70 flex-col gap-4 border bg-accent p-4 shadow-md"
-            key={i}
-          >
-            <div
-              className="relative flex h-60 items-center bg-cover bg-center bg-no-repeat py-10 text-white"
-              style={{ backgroundImage: `url(${img})` }}
-            ></div>
-            <h3 className="font-bold text-accent-2-text">{name}</h3>
-            <p className="text-muted-foreground">{desc}</p>
-            <p className="flex items-center justify-center gap-2 text-primary">
-              {avail === "" ? (
-                ""
-              ) : (
-                <>
-                  <CalendarCheck2Icon size="18" /> {avail}
-                </>
-              )}
-            </p>
-          </div>
+          <Card key={i} size="sm" className="max-w-xs">
+            <img
+              src={img}
+              alt={name}
+              className="relative aspect-5/4 w-full object-cover brightness-70 dark:brightness-40"
+            />
+            <CardHeader>
+              <CardTitle className="font-bold text-accent-2-text">{name}</CardTitle>
+              <CardDescription className="text-justify">{desc}</CardDescription>
+            </CardHeader>
+            <CardFooter className="flex justify-center gap-2 border-t text-primary">
+              <CalendarCheck2Icon size="18" /> {avail}
+            </CardFooter>
+          </Card>
         ))}
       </div>
     </section>

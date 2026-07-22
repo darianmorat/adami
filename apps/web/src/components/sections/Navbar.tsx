@@ -22,11 +22,11 @@ export const Navbar = () => {
     { href: "#import-process", label: "Importación" },
     { href: "#about-us", label: "Nosotros" },
     { href: "#logistics", label: "Logistica" },
-    // { href: "#contact", label: "Contacto" },
+    { href: "#contact", label: "Contacto" },
   ]
 
   return (
-    <nav className="z-10 bg-background py-4">
+    <nav className="z-10 bg-card py-4">
       <Container>
         <div className="flex justify-between gap-10">
           <Logo size="navbar" className="flex-none" />

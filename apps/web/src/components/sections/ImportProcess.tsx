@@ -23,9 +23,9 @@ export const ImportProcess = () => {
 
   return (
     <section className="relative mt-15" id="import-process">
-      <WaveDivider colorValue="#f2e5ff" />
-      <div className="flex flex-col gap-5 bg-purple-200/60 p-10 pb-15 text-center" id="process">
-        <div>
+      <WaveDivider colorValue="#d9e8e0" />
+      <div className="flex flex-col gap-5 bg-primary/10 p-10 pb-15 text-center" id="process">
+        <div className="pb-4">
           <h2 className="text-sm font-bold text-primary">NUESTRO PROCESO DE IMPORTACIÓN</h2>
           <h3 className="text-2xl font-bold">
             Logística eficiente, <span className="text-accent-2-text">entrega segura</span>
@@ -35,8 +35,8 @@ export const ImportProcess = () => {
           {steps.map(({ icon: Icon, line1, line2 }, i) => (
             <Fragment key={i}>
               <div className="flex w-[45%] min-w-30 flex-col items-center sm:w-auto">
-                <div className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-accent-2 bg-white">
-                  <div className="absolute -top-1 -left-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-800 pt-[3px] text-xs font-bold text-white">
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary bg-white">
+                  <div className="absolute -top-1 -left-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary pt-[3px] text-xs font-bold text-white">
                     {i + 1}
                   </div>
                   <Icon />
@@ -55,7 +55,7 @@ export const ImportProcess = () => {
           ))}
         </div>
       </div>
-      <WaveDivider colorValue="#f2e5ff" flip />
+      <WaveDivider colorValue="#d9e8e0" flip />
     </section>
   )
 }

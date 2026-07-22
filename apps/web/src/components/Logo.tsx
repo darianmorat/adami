@@ -44,8 +44,8 @@ export const Logo: React.FC<LogoProps> = ({ className, size = "navbar" }) => {
       </div>
 
       {v.tagline && (
-        <p className="text-[9px] tracking-[0.25em] text-neutral-500 uppercase">
-          Importadores de Frutas Tropicales Premium
+        <p className="text-center text-[9px] tracking-[0.25em] text-neutral-500 uppercase">
+          Importadores de Frutas <br /> Tropicales Premium
         </p>
       )}
     </div>
