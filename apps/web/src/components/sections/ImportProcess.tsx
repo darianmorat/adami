@@ -10,6 +10,8 @@ import {
 } from "lucide-react"
 import { WaveDivider } from "../WaveDivider"
 import { Fragment } from "react/jsx-runtime"
+import { TitleHeader } from "../TitleHeader"
+import { Container } from "../layout/Container"
 
 export const ImportProcess = () => {
   const steps = [
@@ -22,16 +24,14 @@ export const ImportProcess = () => {
   ]
 
   return (
-    <section className="relative mt-15" id="import-process">
+    <section id="import-process" className="relative bg-primary/10">
       <WaveDivider colorValue="#d9e8e0" />
-      <div className="flex flex-col gap-5 bg-primary/10 p-10 pb-15 text-center" id="process">
-        <div className="pb-4">
-          <h2 className="text-sm font-bold text-primary">NUESTRO PROCESO DE IMPORTACIÓN</h2>
-          <h3 className="text-2xl font-bold">
-            Logística eficiente, <span className="text-accent-2-text">entrega segura</span>
-          </h3>
-        </div>
-        <div className="flex flex-nowrap flex-wrap justify-center gap-x-2 gap-y-8">
+      <Container className="py-15">
+        <TitleHeader title="NUESTRO PROCESO DE IMPORTACIÓN">
+          Logística eficiente, <span className="text-accent-2-text">entrega segura</span>
+        </TitleHeader>
+
+        <div className="flex flex-nowrap flex-wrap justify-center gap-x-2 gap-y-8 text-center">
           {steps.map(({ icon: Icon, line1, line2 }, i) => (
             <Fragment key={i}>
               <div className="flex w-[45%] min-w-30 flex-col items-center sm:w-auto">
@@ -54,7 +54,7 @@ export const ImportProcess = () => {
             </Fragment>
           ))}
         </div>
-      </div>
+      </Container>
       <WaveDivider colorValue="#d9e8e0" flip />
     </section>
   )

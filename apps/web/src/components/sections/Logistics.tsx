@@ -1,6 +1,8 @@
-import { WaveDivider } from "../WaveDivider"
 import { Card, CardDescription, CardHeader, CardTitle } from "@workspace/ui/components/card"
 import { ShipIcon, StoreIcon, ThermometerIcon } from "lucide-react"
+import { TitleHeader } from "../TitleHeader"
+import { Container } from "../layout/Container"
+import { WaveDivider } from "../WaveDivider"
 // import { Stats } from "./Stats"
 
 export const Logistics = () => {
@@ -23,20 +25,18 @@ export const Logistics = () => {
   ]
 
   return (
-    <section className="mt-15" id="logistics">
+    <section id="logistics" className="bg-primary/10">
       <WaveDivider colorValue="#d9e8e0" />
-      <div className="flex flex-col gap-5 bg-primary/10 p-10 text-center">
-        <div className="pb-4">
-          <h2 className="text-sm font-bold text-primary">NUESTRA LOGÍSTICA</h2>
-          <h3 className="text-2xl font-bold">
-            Infraestructura que garantiza <br />
-            <span className="text-accent-2-text"> frescura</span> y
-            <span className="text-accent-2-text"> puntualidad</span>
-          </h3>
-        </div>
-        <div className="flex flex-wrap justify-center gap-5">
+      <Container className="py-20 pt-15">
+        <TitleHeader title="NUESTRA LOGÍSTICA">
+          Infraestructura que garantiza <br />
+          <span className="text-accent-2-text"> frescura</span> y
+          <span className="text-accent-2-text"> puntualidad</span>
+        </TitleHeader>
+
+        <div className="flex flex-wrap justify-center gap-4">
           {points.map(({ icon: Icon, title, desc }, i) => (
-            <Card key={i} size="sm" className="relative min-w-sm text-start">
+            <Card key={i} size="sm" className="relative min-w-xs md:min-w-sm">
               <Icon
                 size={90}
                 className="absolute top-1/2 right-1 -translate-y-1/2 text-accent-2-text/10"
@@ -50,7 +50,7 @@ export const Logistics = () => {
         </div>
 
         {/* <Stats /> */}
-      </div>
+      </Container>
     </section>
   )
 }

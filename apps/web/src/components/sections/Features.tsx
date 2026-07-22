@@ -11,13 +11,13 @@ export const Features = () => {
   ]
 
   return (
-    <section className="relative z-10 my-10 -mt-[15px] bg-accent-2 text-white">
+    <section className="relative z-1 bg-accent-2 text-white">
       <WaveDivider colorVar="accent-2" />
-      <Container className="my-[-15px]">
-        <div className="flex flex-col justify-center gap-5 py-10 md:flex-row">
+      <Container>
+        <div className="flex flex-col justify-center gap-4 py-4 md:flex-row">
           {features.map(({ icon: Icon, line1, line2 }, i) => (
             <div
-              className="just flex flex-1 items-center gap-2 border-white/30 pb-5 last:border-0 last:pb-0 max-md:border-b md:justify-center md:border-r md:pr-5 md:pb-0"
+              className="just flex flex-1 items-center gap-2 border-white/30 pb-4 last:border-0 last:pb-0 max-md:border-b md:justify-center md:border-r md:pr-4 md:pb-0"
               key={i}
             >
               <div className="rounded-full border-2 p-2">

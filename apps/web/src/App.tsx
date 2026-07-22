@@ -17,7 +17,6 @@ export function App() {
       <ImportProcess />
       <WhyChooseUs />
       <Logistics />
-      {/* Gallery? */}
       <Footer />
     </div>
   )
